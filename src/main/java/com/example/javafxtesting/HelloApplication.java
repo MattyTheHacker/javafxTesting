@@ -16,10 +16,15 @@ public class HelloApplication extends Application {
 
     @Override
     public void start(Stage pStage) throws IOException {
-        Parent root = FXMLLoader.load((HelloApplication.class.getResource("hello-view.fxml")));
-        Scene scene = new Scene(root, 320, 240);
-        pStage.setTitle("Hello!");
-        pStage.setScene(scene);
-        pStage.show();
+        try {
+            Parent root = FXMLLoader.load((HelloApplication.class.getResource("hello-view.fxml")));
+            Scene scene = new Scene(root);
+            scene.getStylesheets().add(getClass().getResource("main.css").toExternalForm());
+            pStage.setTitle("L33T H@X!");
+            pStage.setScene(scene);
+            pStage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
