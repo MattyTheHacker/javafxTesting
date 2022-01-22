@@ -5,6 +5,9 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCombination;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Line;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class HelloApplication extends Application {
@@ -17,16 +20,24 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws Exception {
 
         Group root = new Group();
-        Scene scene = new Scene(root, Color.AQUA);
+        Scene scene = new Scene(root, 690, 420, Color.AQUA);
 
-        stage.setTitle("L33T H@X");
-        stage.setWidth(420);
-        stage.setHeight(69);
-        stage.setResizable(false);
-        stage.setFullScreen(true);
-        stage.setFullScreenExitHint("There is no escape. (pressQ)");
-        stage.setFullScreenExitKeyCombination(KeyCombination.valueOf("q"));
+        Text text = new Text();
+        text.setText("WAGWAN MY G");
+        text.setX(69);
+        text.setY(69);
+        text.setFont(Font.font("Verdana", 69));
 
+        Line line = new Line();
+        line.setStartX(120);
+        line.setStartY(120);
+        line.setEndX(480);
+        line.setEndY(240);
+        line.setStrokeWidth(5);
+        line.setStroke(Color.CORNSILK);
+
+        root.getChildren().add(text);
+        root.getChildren().add(line);
         stage.setScene(scene);
         stage.show();
     }
