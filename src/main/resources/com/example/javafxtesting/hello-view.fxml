@@ -34,5 +34,7 @@
       </Circle>
       <Label fx:id="topLeftLabel" layoutX="45.0" layoutY="35.0" prefHeight="81.0" prefWidth="151.0" text="TopLeft" />
       <Label fx:id="topRightLabel" layoutX="461.0" layoutY="329.0" text="TopRight" />
+      <Button layoutX="449.0" layoutY="50.0" mnemonicParsing="false" onAction="#switchToScene1" text="Scene 1" />
+      <Button layoutX="95.0" layoutY="325.0" mnemonicParsing="false" onAction="#switchToScene2" text="Scene 2" />
    </children>
 </AnchorPane>
