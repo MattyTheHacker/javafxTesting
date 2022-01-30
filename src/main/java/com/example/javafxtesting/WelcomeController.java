@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class WelcomeController {
+
     @FXML
     Label txtNameLabel;
 
@@ -23,6 +24,14 @@ public class WelcomeController {
     public void logout(ActionEvent e) throws IOException {
         txtNameLabel.setText("Welcome, ");
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("exit.fxml")));
+        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void viewImage(ActionEvent e) throws IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("imageViewer.fxml")));
         Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
