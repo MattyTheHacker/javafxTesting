@@ -58,8 +58,16 @@ public class HelloController {
         stage.show();
     }
 
-    public void switchToSceneHome(ActionEvent e) throws IOException{
+    public void switchToSceneHome(ActionEvent e) throws IOException {
         root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
+        stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void switchToSceneLogin(ActionEvent e) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("login.fxml"));
         stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

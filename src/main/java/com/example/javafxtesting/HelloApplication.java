@@ -17,7 +17,7 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage pStage) throws IOException {
         try {
-            Parent root = FXMLLoader.load((HelloApplication.class.getResource("hello-view.fxml")));
+            Parent root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
             Scene scene = new Scene(root);
             scene.getStylesheets().add(getClass().getResource("main.css").toExternalForm());
             pStage.setTitle("L33T H@X!");
