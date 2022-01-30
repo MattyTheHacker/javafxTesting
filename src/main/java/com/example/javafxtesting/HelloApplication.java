@@ -4,6 +4,8 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
 
 import java.util.Objects;
@@ -23,8 +25,24 @@ public class HelloApplication extends Application {
             pStage.setTitle("L33T H@X!");
             pStage.setScene(scene);
             pStage.show();
+            pStage.setOnCloseRequest(event -> {
+                event.consume();
+                exit(pStage);
+            });
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+    public void exit(Stage stage) {
+        Alert exitConfirmation = new Alert(Alert.AlertType.CONFIRMATION);
+        exitConfirmation.setTitle("Exit Confirmation");
+        exitConfirmation.setHeaderText("You are about to exit!");
+        exitConfirmation.setContentText("Are you sure you wish to continue?");
+
+        if (exitConfirmation.showAndWait().orElse(null) == ButtonType.OK) {
+            System.out.println("[INFO] Program will now exit...");
+            stage.close();
         }
     }
 }
