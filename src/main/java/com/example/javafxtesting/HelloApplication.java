@@ -6,7 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.io.IOException;
+import java.util.Objects;
 
 public class HelloApplication extends Application {
 
@@ -15,9 +15,9 @@ public class HelloApplication extends Application {
     }
 
     @Override
-    public void start(Stage pStage) throws IOException {
+    public void start(Stage pStage) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("hello-view.fxml")));
             Scene scene = new Scene(root);
             scene.getStylesheets().add(getClass().getResource("main.css").toExternalForm());
             pStage.setTitle("L33T H@X!");

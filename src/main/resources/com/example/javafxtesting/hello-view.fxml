@@ -9,33 +9,31 @@
 <?import javafx.scene.shape.Circle?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxtesting.HelloController">
-   <children>
-      <Button alignment="CENTER" layoutX="285.0" layoutY="73.0" mnemonicParsing="false" onAction="#up" text="UP" AnchorPane.topAnchor="50.0" />
-      <Button contentDisplay="CENTER" layoutX="273.0" layoutY="311.0" mnemonicParsing="false" onAction="#down" text="DOWN" AnchorPane.bottomAnchor="50.0" />
-      <Button layoutX="78.0" layoutY="188.0" mnemonicParsing="false" onAction="#left" text="LEFT" AnchorPane.leftAnchor="100.0" />
-      <Button layoutX="496.0" layoutY="188.0" mnemonicParsing="false" onAction="#right" text="RIGHT" AnchorPane.rightAnchor="100.0" />
-      <Circle fx:id="middleCircle" layoutX="301.0" layoutY="201.0" radius="100.0" stroke="BLACK" strokeType="INSIDE">
-         <fill>
-            <LinearGradient endX="1.0" endY="1.0">
-               <stops>
-                  <Stop>
-                     <color>
-                        <Color red="0.7974100708961487" green="0.11999999731779099" blue="1.0" />
-                     </color>
-                  </Stop>
-                  <Stop offset="1.0">
-                     <color>
-                        <Color red="1.0" green="1.0" blue="1.0" />
-                     </color>
-                  </Stop>
-               </stops>
-            </LinearGradient>
-         </fill>
-      </Circle>
-      <Label fx:id="topLeftLabel" layoutX="45.0" layoutY="35.0" prefHeight="81.0" prefWidth="151.0" text="TopLeft" />
-      <Label fx:id="topRightLabel" layoutX="461.0" layoutY="329.0" text="TopRight" />
-      <Button layoutX="449.0" layoutY="50.0" mnemonicParsing="false" onAction="#switchToScene1" text="Scene 1" />
-      <Button layoutX="95.0" layoutY="325.0" mnemonicParsing="false" onAction="#switchToScene2" text="Scene 2" />
-      <Button layoutX="274.0" layoutY="189.0" mnemonicParsing="false" onAction="#switchToSceneLogin" text="Login" />
-   </children>
+   <Button alignment="CENTER" layoutX="285.0" layoutY="73.0" mnemonicParsing="false" onAction="#up" text="UP" AnchorPane.topAnchor="50.0" />
+   <Button contentDisplay="CENTER" layoutX="273.0" layoutY="311.0" mnemonicParsing="false" onAction="#down" text="DOWN" AnchorPane.bottomAnchor="50.0" />
+   <Button layoutX="78.0" layoutY="188.0" mnemonicParsing="false" onAction="#left" text="LEFT" AnchorPane.leftAnchor="100.0" />
+   <Button layoutX="496.0" layoutY="188.0" mnemonicParsing="false" onAction="#right" text="RIGHT" AnchorPane.rightAnchor="100.0" />
+   <Circle fx:id="middleCircle" layoutX="301.0" layoutY="201.0" radius="100.0" stroke="BLACK" strokeType="INSIDE">
+      <fill>
+         <LinearGradient>
+            <stops>
+               <Stop>
+                  <color>
+                     <Color red="0.7974100708961487" green="0.11999999731779099" blue="1.0" />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="1.0" green="1.0" blue="1.0" />
+                  </color>
+               </Stop>
+            </stops>
+         </LinearGradient>
+      </fill>
+   </Circle>
+   <Label layoutX="45.0" layoutY="35.0" prefHeight="81.0" prefWidth="151.0" text="TopLeft" />
+   <Label layoutX="461.0" layoutY="329.0" text="TopRight" />
+   <Button layoutX="449.0" layoutY="50.0" mnemonicParsing="false" onAction="#switchToScene1" text="Scene 1" />
+   <Button layoutX="95.0" layoutY="325.0" mnemonicParsing="false" onAction="#switchToScene2" text="Scene 2" />
+   <Button layoutX="274.0" layoutY="189.0" mnemonicParsing="false" onAction="#switchToSceneLogin" text="Login" />
 </AnchorPane>

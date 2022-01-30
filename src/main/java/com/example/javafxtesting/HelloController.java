@@ -10,6 +10,7 @@ import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class HelloController {
 
@@ -22,28 +23,28 @@ public class HelloController {
     private double circleX;
     private double circleY;
 
-    public void up(ActionEvent e) {
+    public void up() {
         System.out.println("UP");
         middleCircle.setCenterY(circleY -= 10);
     }
 
-    public void down(ActionEvent e) {
+    public void down() {
         System.out.println("DOWN");
         middleCircle.setCenterY(circleY += 10);
     }
 
-    public void left(ActionEvent e) {
+    public void left() {
         System.out.println("LEFT");
         middleCircle.setCenterX(circleX -= 10);
     }
 
-    public void right(ActionEvent e) {
+    public void right() {
         System.out.println("RIGHT");
         middleCircle.setCenterX(circleX += 10);
     }
 
     public void switchToScene1(ActionEvent e) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("Scene1.fxml"));
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Scene1.fxml")));
         stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -51,7 +52,7 @@ public class HelloController {
     }
 
     public void switchToScene2(ActionEvent e) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("Scene2.fxml"));
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Scene2.fxml")));
         stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -59,7 +60,7 @@ public class HelloController {
     }
 
     public void switchToSceneHome(ActionEvent e) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("hello-view.fxml")));
         stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -67,7 +68,7 @@ public class HelloController {
     }
 
     public void switchToSceneLogin(ActionEvent e) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("login.fxml"));
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("login.fxml")));
         stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
