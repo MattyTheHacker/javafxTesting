@@ -74,4 +74,12 @@ public class HelloController {
         stage.setScene(scene);
         stage.show();
     }
+
+    public void switchToSceneList(ActionEvent e) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("listView.fxml")));
+        stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 }

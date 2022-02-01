@@ -36,4 +36,5 @@
    <Button layoutX="449.0" layoutY="50.0" mnemonicParsing="false" onAction="#switchToScene1" text="Scene 1" />
    <Button layoutX="95.0" layoutY="325.0" mnemonicParsing="false" onAction="#switchToScene2" text="Scene 2" />
    <Button layoutX="274.0" layoutY="189.0" mnemonicParsing="false" onAction="#switchToSceneLogin" text="Login" />
+   <Button fx:id="btnLstView" layoutX="153.0" layoutY="104.0" mnemonicParsing="false" onAction="#switchToSceneList" text="List View" />
 </AnchorPane>
