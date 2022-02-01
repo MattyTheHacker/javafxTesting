@@ -18,6 +18,6 @@
       <Label fx:id="lblBranch" layoutX="577.0" layoutY="300.0" text="Label" />
       <ListView fx:id="lstBranches" layoutX="341.0" layoutY="219.0" prefHeight="200.0" prefWidth="200.0" />
       <Label layoutX="364.0" layoutY="38.0" text="Enter your name:" />
-      <Button fx:id="btnSubmit" layoutX="397.0" layoutY="447.0" mnemonicParsing="false" text="Submit Order" />
+      <Button fx:id="btnSubmit" layoutX="397.0" layoutY="447.0" mnemonicParsing="false" onAction="#submit" text="Submit Order" />
    </children>
 </AnchorPane>
