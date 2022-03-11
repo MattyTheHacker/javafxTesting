@@ -20,7 +20,7 @@ public class HelloApplication extends Application {
         try {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("hello-view.fxml")));
             Scene scene = new Scene(root);
-            scene.getStylesheets().add(getClass().getResource("main.css").toExternalForm());
+            scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("main.css")).toExternalForm());
             pStage.setTitle("L33T H@X!");
             pStage.setScene(scene);
             pStage.show();
